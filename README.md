@@ -56,14 +56,14 @@ A comprehensive NLP project demonstrating two emoji prediction models: a simple 
 
 # Initialize the LSTM-based Emojify model with pre-trained embeddings
 
-**Shape of input sequences (max sentence length)**
-**input_shape = (maxLen,)**
+*Shape of input sequences (max sentence length)*  
+*input_shape = (maxLen,)*
 
-Pre-trained GloVe embeddings
-**word_to_vec_map_param = word_to_vec_map**
+*Pre-trained GloVe embeddings*  
+*word_to_vec_map_param = word_to_vec_map*
 
-Mapping from words to indices
-**word_to_index_param = word_to_index**
+*Mapping from words to indices*  
+*word_to_index_param = word_to_index*
 
 model = Emojify_V2(
     input_shape=input_shape,
@@ -73,14 +73,14 @@ model = Emojify_V2(
 
 # Compile the LSTM-based Emojify model
 
-#Loss function for multi-class classification
-**loss_function = 'categorical_crossentropy'**
+#Loss function for multi-class classification  
+*loss_function = 'categorical_crossentropy'*
 
-#Optimizer for training
-**optimizer_method = 'adam'**
+#Optimizer for training  
+*optimizer_method = 'adam'*
 
-#Evaluation metric
-**evaluation_metrics = ['accuracy']**
+#Evaluation metric  
+*evaluation_metrics = ['accuracy']*
 
 model.compile(
     loss=loss_function,
@@ -90,16 +90,16 @@ model.compile(
 
 # Train the model
 
-Input training data (sentence indices)
-**X_train_data = X_train_indices**
+*Input training data (sentence indices)*  
+*X_train_data = X_train_indices*
 
-One-hot encoded labels
-**Y_train_data = Y_train_oh**
+*One-hot encoded labels*  
+*Y_train_data = Y_train_oh*
 
-Number of training epochs
+*Number of training epochs*  
 num_epochs = 50
 
-Mini-batch size
+*Mini-batch size*  
 batch_size = 32
 
 model.fit(
@@ -108,6 +108,7 @@ model.fit(
     epochs=num_epochs,
     batch_size=batch_size
 )
+
 
 ## Embedding Layer
 - Constructed from GloVe vectors  
