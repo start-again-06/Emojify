@@ -54,9 +54,28 @@ A comprehensive NLP project demonstrating two emoji prediction models: a simple 
 
 ## Training Example
 
-model = Emojify_V2((maxLen,), word_to_vec_map, word_to_index)
-model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-model.fit(X_train_indices, Y_train_oh, epochs=50, batch_size=32)
+# Initialize the LSTM-based Emojify model
+model = Emojify_V2(
+    input_shape=(maxLen,),      # Input sequence length
+    word_to_vec_map=word_to_vec_map,  # Pre-trained GloVe embeddings
+    word_to_index=word_to_index       # Mapping from words to indices
+)
+
+# Compile the model
+model.compile(
+    loss='categorical_crossentropy',  # Loss function for multi-class classification
+    optimizer='adam',                 # Optimizer for training
+    metrics=['accuracy']              # Evaluation metric
+)
+
+# Train the model
+model.fit(
+    x=X_train_indices,   # Input training data (sentence indices)
+    y=Y_train_oh,       # One-hot encoded labels
+    epochs=50,           # Number of training epochs
+    batch_size=32        # Mini-batch size
+)
+
 
 ## Embedding Layer
 - Constructed from GloVe vectors  
