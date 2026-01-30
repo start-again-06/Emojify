@@ -73,13 +73,13 @@ A comprehensive NLP project demonstrating two emoji prediction models: a simple 
 
 # Compile the LSTM-based Emojify model
 
-#Loss function for multi-class classification  
+*Loss function for multi-class classification* 
 *loss_function = 'categorical_crossentropy'*
 
-#Optimizer for training  
+*Optimizer for training*
 *optimizer_method = 'adam'*
 
-#Evaluation metric  
+Evaluation metric  
 *evaluation_metrics = ['accuracy']*
 
 *model.compile(
