@@ -56,10 +56,19 @@ A comprehensive NLP project demonstrating two emoji prediction models: a simple 
 
 # Initialize the LSTM-based Emojify model with pre-trained embeddings
 
+# Shape of input sequences (max sentence length)
+input_shape = (maxLen,)
+
+# Pre-trained GloVe embeddings
+word_to_vec_map_param = word_to_vec_map
+
+# Mapping from words to indices
+word_to_index_param = word_to_index
+
 model = Emojify_V2(
-    input_shape=(maxLen,),           # Input sequence length
-    word_to_vec_map=word_to_vec_map, # Pre-trained GloVe embeddings
-    word_to_index=word_to_index      # Mapping from words to indices
+    input_shape=input_shape,
+    word_to_vec_map=word_to_vec_map_param,
+    word_to_index=word_to_index_param
 )
 
 
