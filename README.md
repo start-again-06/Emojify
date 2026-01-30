@@ -54,7 +54,7 @@ A comprehensive NLP project demonstrating two emoji prediction models: a simple 
 
 ## Training Example
 
-#Initialize the LSTM-based Emojify model with pre-trained embeddings#
+Initialize the LSTM-based Emojify model with pre-trained embeddings
 
 *Shape of input sequences (max sentence length)*  
 *input_shape = (maxLen,)*
@@ -71,7 +71,7 @@ A comprehensive NLP project demonstrating two emoji prediction models: a simple 
     word_to_index=word_to_index_param
 )*
 
-*Compile the LSTM-based Emojify model*
+Compile the LSTM-based Emojify model
 
 *Loss function for multi-class classification* 
 *loss_function = 'categorical_crossentropy'*
@@ -88,7 +88,7 @@ A comprehensive NLP project demonstrating two emoji prediction models: a simple 
     metrics=evaluation_metrics
 )*
 
-*Train the model*
+Train the model
 
 *Input training data (sentence indices)*  
 *X_train_data = X_train_indices*
