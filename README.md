@@ -65,11 +65,11 @@ A comprehensive NLP project demonstrating two emoji prediction models: a simple 
 *Mapping from words to indices*  
 *word_to_index_param = word_to_index*
 
-model = Emojify_V2(
+*model = Emojify_V2(
     input_shape=input_shape,
     word_to_vec_map=word_to_vec_map_param,
     word_to_index=word_to_index_param
-)
+)*
 
 # Compile the LSTM-based Emojify model
 
@@ -82,11 +82,11 @@ model = Emojify_V2(
 #Evaluation metric  
 *evaluation_metrics = ['accuracy']*
 
-model.compile(
+*model.compile(
     loss=loss_function,
     optimizer=optimizer_method,
     metrics=evaluation_metrics
-)
+)*
 
 # Train the model
 
@@ -102,12 +102,12 @@ num_epochs = 50
 *Mini-batch size*  
 batch_size = 32
 
-model.fit(
+*model.fit(
     x=X_train_data,
     y=Y_train_data,
     epochs=num_epochs,
     batch_size=batch_size
-)
+)*
 
 
 ## Embedding Layer
