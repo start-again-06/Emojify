@@ -56,13 +56,13 @@ A comprehensive NLP project demonstrating two emoji prediction models: a simple 
 
 # Initialize the LSTM-based Emojify model with pre-trained embeddings
 
-# Shape of input sequences (max sentence length)
+Shape of input sequences (max sentence length)
 input_shape = (maxLen,)
 
-# Pre-trained GloVe embeddings
+Pre-trained GloVe embeddings
 word_to_vec_map_param = word_to_vec_map
 
-# Mapping from words to indices
+Mapping from words to indices
 word_to_index_param = word_to_index
 
 model = Emojify_V2(
@@ -71,22 +71,43 @@ model = Emojify_V2(
     word_to_index=word_to_index_param
 )
 
+# Compile the LSTM-based Emojify model
 
-# Compile the model
+#Loss function for multi-class classification
+loss_function = 'categorical_crossentropy'
+
+#Optimizer for training
+optimizer_method = 'adam'
+
+#Evaluation metric
+evaluation_metrics = ['accuracy']
+
 model.compile(
-    loss='categorical_crossentropy',  # Loss function for multi-class classification
-    optimizer='adam',                 # Optimizer for training
-    metrics=['accuracy']              # Evaluation metric
+    loss=loss_function,
+    optimizer=optimizer_method,
+    metrics=evaluation_metrics
 )
 
 # Train the model
-model.fit(
-    x=X_train_indices,   # Input training data (sentence indices)
-    y=Y_train_oh,       # One-hot encoded labels
-    epochs=50,           # Number of training epochs
-    batch_size=32        # Mini-batch size
-)
 
+Input training data (sentence indices)
+X_train_data = X_train_indices
+
+One-hot encoded labels
+Y_train_data = Y_train_oh
+
+Number of training epochs
+num_epochs = 50
+
+Mini-batch size
+batch_size = 32
+
+model.fit(
+    x=X_train_data,
+    y=Y_train_data,
+    epochs=num_epochs,
+    batch_size=batch_size
+)
 
 ## Embedding Layer
 - Constructed from GloVe vectors  
