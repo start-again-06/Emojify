@@ -1,4 +1,4 @@
-Emojify: Text-to-Emoji Classifier  
+## Emojify: Text-to-Emoji Classifier  
 
 A comprehensive NLP project demonstrating two emoji prediction models: a simple softmax classifier based on averaged word vectors and an LSTM-based deep network leveraging pre-trained GloVe embeddings. The project focuses on converting text into emojis by capturing semantic and contextual information.
 
@@ -56,14 +56,14 @@ A comprehensive NLP project demonstrating two emoji prediction models: a simple 
 
 # Initialize the LSTM-based Emojify model with pre-trained embeddings
 
-Shape of input sequences (max sentence length)
-input_shape = (maxLen,)
+**Shape of input sequences (max sentence length)**
+**input_shape = (maxLen,)**
 
 Pre-trained GloVe embeddings
-word_to_vec_map_param = word_to_vec_map
+**word_to_vec_map_param = word_to_vec_map**
 
 Mapping from words to indices
-word_to_index_param = word_to_index
+**word_to_index_param = word_to_index**
 
 model = Emojify_V2(
     input_shape=input_shape,
@@ -74,13 +74,13 @@ model = Emojify_V2(
 # Compile the LSTM-based Emojify model
 
 #Loss function for multi-class classification
-loss_function = 'categorical_crossentropy'
+**loss_function = 'categorical_crossentropy'**
 
 #Optimizer for training
-optimizer_method = 'adam'
+**optimizer_method = 'adam'**
 
 #Evaluation metric
-evaluation_metrics = ['accuracy']
+**evaluation_metrics = ['accuracy']**
 
 model.compile(
     loss=loss_function,
@@ -91,10 +91,10 @@ model.compile(
 # Train the model
 
 Input training data (sentence indices)
-X_train_data = X_train_indices
+**X_train_data = X_train_indices**
 
 One-hot encoded labels
-Y_train_data = Y_train_oh
+**Y_train_data = Y_train_oh**
 
 Number of training epochs
 num_epochs = 50
