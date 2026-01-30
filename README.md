@@ -54,7 +54,7 @@ A comprehensive NLP project demonstrating two emoji prediction models: a simple 
 
 ## Training Example
 
-# Initialize the LSTM-based Emojify model with pre-trained embeddings
+Initialize the LSTM-based Emojify model with pre-trained embeddings
 
 *Shape of input sequences (max sentence length)*  
 *input_shape = (maxLen,)*
@@ -79,7 +79,7 @@ A comprehensive NLP project demonstrating two emoji prediction models: a simple 
 *Optimizer for training*
 *optimizer_method = 'adam'*
 
-Evaluation metric  
+*Evaluation metric* 
 *evaluation_metrics = ['accuracy']*
 
 *model.compile(
